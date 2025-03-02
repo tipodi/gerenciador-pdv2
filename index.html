@@ -1,0 +1,94 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alocação de Operadores em PDVs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <svg width="100" height="50" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="100" fill="#2980b9"/>
+                <path d="M20 20H180V80H20V20Z" fill="#f39c12"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="30" fill="white" font-family="Arial, sans-serif">Lucas</text>
+                <path d="M30 85H170L150 95H50L30 85Z" fill="#e74c3c"/>
+            </svg>
+        </div>
+        <h1>Alocação de Operadores em PDVs</h1>
+    </header>
+
+    <aside id="login-area">
+        <button id="login-gear-button">&#9881;</button>
+        <h2>Login / Alterar Senha</h2>
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginButton">Login</button>
+                <p id="loginMessage"></p>
+            </div>
+        </div>
+        <button id="alterarSenhaButton">Alterar Senha</button>
+    </aside>
+
+    <main>
+        <section id="pdvs-pendentes">
+            <h2>PDVs Sem Operador</h2>
+            <ul id="lista-pdvs-pendentes"></ul>
+        </section>
+
+        <section id="operadores-disponiveis">
+            <h2>Operadores Disponíveis</h2>
+            <ul id="lista-operadores-disponiveis"></ul>
+        </section>
+
+        <section id="alocacao">
+            <h2>Alocação</h2>
+            <p>Arraste um operador para um PDV para alocar.</p>
+            <div id="grade-alocacao"></div>
+        </section>
+
+        <section id="gerenciamento">
+            <h2>Gerenciamento de Operadores</h2>
+            <button id="adicionar-operador">Adicionar Operador</button>
+            <button id="remover-operador">Remover Operador</button>
+            <button id="criar-grupo-turno">Criar Grupo de Turno</button>
+            <button id="alocar-automaticamente">Alocar Automaticamente</button>
+        </section>
+
+        <section id="grupos-turno">
+            <h2>Grupos de Turno</h2>
+            <ul id="lista-grupos-turno"></ul>
+        </section>
+
+        <section id="status">
+            <h2>Status</h2>
+            <div>
+                <h3>PDVs Vazios:</h3>
+                <ul id="lista-pdvs-vazios"></ul>
+            </div>
+            <div>
+                <h3>Operadores Sem PDV:</h3>
+                <ul id="lista-operadores-sem-pdv"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alocação de Operadores</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
